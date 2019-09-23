@@ -1,0 +1,95 @@
+@font-face {
+  font-family: "LucidaSans-Italic";
+  src: url("assets/fonts/LucidaSans-Italic.woff2") format("woff2");
+  font-weight: 600;
+  font-display: swap;
+  font-style: italic;
+}
+@font-face {
+  font-family: "opensans";
+  src: url("assets/fonts/opensans.woff2") format("woff2");
+  font-weight: 600;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "SegoeUI-Light";
+  src: url("assets/fonts/SegoeUI-Light.woff2") format("woff2");
+  font-weight: 300;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "SegoeUI";
+  src: url("assets/fonts/SegoeUI.woff2") format("woff2");
+  font-weight: 600;
+  font-display: swap;
+  font-style: normal;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", Helvetica, sans-serif;
+  line-height: 1.42;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+html {
+  height: 100%;
+  font-size: 1rem;
+}
+
+html {
+  -webkit-overflow-scrolling: touch;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+p,
+h3,
+h1,
+h2,
+h4,
+h5,
+h6 {
+  padding: 0;
+  margin: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+section {
+  padding: 15px 0;
+  position: relative;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.wrapper {
+  height: 100%;
+  width: 100%;
+  overflow-x: auto;
+  padding: 20px;
+  background: silver;
+}
