@@ -10,10 +10,10 @@
     <title>theyalow</title>
 </head>
 
-<body>
+<body class="body">
     <div class="wrapper">
         <header class="header">
-            <div class="container header__container">
+            <div class="header__container">
                 <div class="header__logo logo">
                     <h1 class="logo__title">
                         <a class="logo__link" href="#">theyalow</a>
@@ -21,7 +21,7 @@
                 </div>
                 <nav class="header__nav nav">
                     <ul class="navigation">
-                        <li class="navigation__item"><a class="navigation__link " href="#"><span
+                        <li class="navigation__item"><a class="navigation__link" href="#"><span
                                     class="navigation__link-wrap navigation__link-wrap_about">about us</span> </a></li>
                         <li class="navigation__item"><a class="navigation__link" href="#"><span
                                     class="navigation__link-wrap navigation__link-wrap_services">services</span></a>
@@ -34,9 +34,9 @@
         </header>
         <main class="main">
             <section class="hero">
-                <div class="hero__wrapper">
-                    <div class="hero__container container">
-                        <div class="hero__video player">
+                <ul class="hero-list">
+                    <li class="hero-list__item container">
+                        <div class="player">
                             <video class="player__video" poster="assets/images/bg-v1.jpg"></video>
                             <div class="player__controls">
                                 <button class="player__play"></button>
@@ -49,24 +49,19 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="hero__text">
-                            <div class="hero__text-wrapper">
-                                <h2 class="hero__title hero__title_padding">The cool</h2>
-                                <h2 class="hero__title hero__title_white">The minimal</h2>
+                        <div class="video-text">
+                            <div class="video-text__wrapper">
+                                <h2 class="video-text__title video-text__title_padding">The cool</h2>
+                                <h2 class="video-text__title video-text__title_white">The minimal</h2>
                             </div>
                         </div>
-                    </div>
-                </div>
+                    </li>
+                </ul>
                 <div class="video-navigation">
                     <button class="video-navigation__btn video-navigation__btn_prev"></button>
                     <button class="video-navigation__btn video-navigation__btn_next"></button>
                 </div>
             </section>
-
-
-
-
-
             <!-- <section class="excellence">
                 <div class="container">
                     <ul class="advantages">
@@ -120,7 +115,5 @@
             </div>
         </footer> -->
     </div>
-
 </body>
-
 </html>
