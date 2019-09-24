@@ -130,6 +130,10 @@ h1 {
   padding-left: 85px;
   line-height: 1;
   letter-spacing: 0.3px;
+  transition: 0.3s;
+}
+h1:hover{
+  text-shadow: 2px 2px 0px rgb(245, 197, 5);
 }
 
 button {
@@ -141,7 +145,7 @@ button {
   cursor: pointer;
 }
 
-.logo__title::before {
+.logo__link::before {
   content: "";
   position: absolute;
   top: 50%;
@@ -173,7 +177,9 @@ button {
   height: 97%;
   background-color: #dcb105;
 }
-
+.navigation__item:last-child::after{
+  width: 0;
+}
 .navigation__link {
   display: flex;
   font-size: 17px;
@@ -182,9 +188,17 @@ button {
   text-transform: uppercase;
   letter-spacing: 0.5px;
   padding: 8px 22px 9px 16px;
+  transform: background-image 0.3s;
   background-image: linear-gradient(0deg, #f5c505 0%, #f5c505 100%);
+
 }
 
+.navigation__link:hover{
+  background-image: linear-gradient(0deg, #e6f102 0%, #f5c505 100%);
+}
+.navigation__link:focus{
+  background-image: linear-gradient(0deg, #f5c505 0%, #bef505 100%);
+}
 .navigation__link-wrap {
   position: relative;
   padding-left: 31px;
@@ -284,6 +298,10 @@ button {
   background-repeat: no-repeat;
   background-position-x: 42%;
   background-position-y: 50%;
+  transition: 0.3s;
+}
+.video-navigation__btn:hover{
+  background-color: #f5a806;
 }
 
 .hero__text {
@@ -306,7 +324,10 @@ button {
 .player {
   position: relative;
 }
-
+.player__video{
+  width: 549px;
+  height: 328px;
+}
 .player__play {
   position: absolute;
   width: 67px;
@@ -321,6 +342,12 @@ button {
   background-repeat: no-repeat;
   background-position: 56%;
   background-size: 30%;
+  transition: 0.3s;
+}
+
+
+.player__play:hover{
+  background-color: #f5a806;
 }
 
 .hero__text-wrapper {
@@ -355,8 +382,13 @@ button {
   background-position: 57%;
   opacity: 0.7;
   background-size: 40%;
+  transition: 0.3s;
 }
 
+
+.player-state__play:hover{
+  background-color: #f5a806;
+}
 .player-state__volume {
   width: 17px;
   height: 20px;
@@ -364,6 +396,10 @@ button {
   background-image: url("assets/images/volume.svg");
   background-repeat: no-repeat;
   background-position: center;
+  transition: 0.3s;
+}
+.player-state__volume:hover{
+  transform: scale(1.3);
 }
 
 .player-state__playback {
@@ -385,7 +421,13 @@ button {
   opacity: 0.28;
   display: block;
   transform: translateY(-50%);
+  transition: 0.3s;
 }
+
+.player-state__playback:hover::before{
+  opacity: 0.5;
+}
+
 
 .player-state__playback-btn {
   background-color: #f5c506;
