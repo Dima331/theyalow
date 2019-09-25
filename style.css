@@ -31,6 +31,14 @@
 }
 
 @font-face {
+  font-family: "SegoeUI-Bold";
+  src: url("assets/fonts/SegoeUI-Bold.woff2") format("woff2");
+  font-weight: 600;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
   font-family: "Asap";
   src: url("assets/fonts/Asap-Regular.woff2") format("woff2");
   font-weight: 600;
@@ -54,11 +62,20 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: "SegoeWP";
+  src: url("assets/fonts/SegoeWP-Light.woff2") format("woff2");
+  font-weight: 300;
+  font-display: swap;
+  font-style: normal;
+}
+
 body {
   margin: 0;
   padding: 0;
   font-family: "Open Sans", Helvetica, sans-serif;
   line-height: 1.42;
+  overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -68,7 +85,6 @@ body {
 }
 
 body, html {
-  height: 100%;
   font-size: 1rem;
 }
 
@@ -115,6 +131,8 @@ button {
   height: 100%;
   width: 100%;
   background: silver;
+  display: flex;
+  flex-direction: column;
 }
 
 .container {
@@ -123,7 +141,7 @@ button {
   position: relative;
 }
 
-.main{
+.main {
   position: relative;
 }
 
@@ -606,6 +624,7 @@ button {
 
 .advantages__item:nth-child(1) .advantage__img {
   margin-bottom: 9px;
+  height: 75px;
 }
 
 .advantages__item:nth-child(1) .advantage__title {
@@ -621,6 +640,7 @@ button {
 
 .advantages__item:nth-child(2) .advantage__img {
   margin-bottom: 12px;
+  height: 96px;
 }
 
 .advantages__item:nth-child(2) .advantage__title {
@@ -635,6 +655,7 @@ button {
 
 .advantages__item:nth-child(3) .advantage__img {
   margin-bottom: 7px;
+  height: 84px;
 }
 
 .advantages__item:nth-child(3) .advantage__title {
@@ -686,6 +707,7 @@ button {
 .kind-display__view {
   width: 55%;
   margin-right: 4.5%;
+  position: relative;
 }
 
 .description-list {
@@ -732,15 +754,15 @@ button {
 
 .sale_position {
   position: absolute;
-  top: 53px;
+  top: -43px;
   left: -2px;
 }
 
 /*kind-display end*/
 
-
 /*footer start*/
-.footer__logo .logo__title{
+
+.footer__logo .logo__title {
   font-size: 29px;
   letter-spacing: 0px;
   color: #ffffff;
@@ -751,22 +773,319 @@ button {
   padding-left: 59px;
   font-weight: 400;
 }
+
 .footer__logo .logo__title:hover {
-    text-shadow: 2px 2px 0px rgb(245, 197, 5);
+  text-shadow: 2px 2px 0px rgb(245, 197, 5);
 }
-.footer__logo .logo__link::before{
+
+.footer__logo .logo__link::before {
   width: 51px;
   height: 51px;
   background-size: contain;
 }
-.footer{
-  padding: 25px 0 15px 0;
+
+.footer {
+  padding: 18px 0 15px 0;
   box-shadow: 0 -2px 15px rgba(0, 0, 0, 0.7);
   background-color: #4c4c4c;
   position: relative;
 }
-.footer__logo  .logo__link::before{
-  transform: translateY(-54%);
-  left: 2px;
+
+.footer__logo .logo__link::before {
+  transform: translateY(-50%);
+  left: 1px;
 }
+
 /*footer end*/
+
+/*calendar-range start*/
+
+.news {
+  background-image: url("assets/images/bg-news.png");
+  background-size: 4%;
+  padding: 35px 0;
+  padding-bottom: 15px;
+}
+
+.news__title {
+  color: #ffffff;
+  text-align: left;
+  margin-bottom: 37px;
+  font-size: 37px;
+}
+
+.calendar__dec-text {
+  font-size: 29px;
+  letter-spacing: 0px;
+  color: #ffffff;
+  font-family: "SegoeWP";
+  font-weight: 300;
+}
+
+.twitter__date {
+  color: #ffffff;
+  font-size: 25px;
+  letter-spacing: 0px;
+  font-family: "SegoeWP";
+  position: absolute;
+  right: 20px;
+  top: 10px;
+}
+
+.date-video__number {
+  font-size: 51px;
+  letter-spacing: 1px;
+  color: #ffffff;
+  font-family: "SegoeUI-Bold";
+  font-weight: bold;
+}
+
+.date-video__month {
+  font-size: 21px;
+  letter-spacing: 0px;
+  color: #b26529;
+  font-family: "SegoeUI";
+  text-transform: uppercase;
+}
+
+.plus {
+  font-size: 22px;
+  font-weight: 500;
+  color: #fff;
+  padding: 0 10px;
+  transition: 0.3s;
+}
+.plus:hover{
+  transform: scale(1.5);
+}
+
+.plus:focus{
+   -webkit-animation: rotate-center 0.6s ease-in-out both;
+	        animation: rotate-center 0.6s ease-in-out both;
+}
+
+@-webkit-keyframes rotate-center {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+@keyframes rotate-center {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+
+.news-list__item {
+  display: flex;
+}
+.news-list{
+  margin-bottom: 43px;
+}
+.calendar {
+  width: 64.2%;
+  margin-right: 3.5%;
+}
+
+.twitter {
+  width: 32.3%;
+  height: 232px;
+  background-color: #ec9e03;
+  background-image: url("assets/images/twitter.svg");
+  background-repeat: no-repeat;
+  background-position-x: 49%;
+  background-position-y: 58%;
+  position: relative;
+}
+
+.twitter__plus {
+  position: absolute;
+  right: 1px;
+  bottom: 2px;
+}
+
+.calendar__wrap {
+  display: flex;
+  height: 232px;
+}
+
+.calendar__dec {
+  width: 52%;
+  padding: 16px 30px 28px 29px;
+  line-height: 1.33;
+  background-color: #ec9e03;
+  position: relative;
+}
+
+.calendar__video {
+  width: 48%;
+  height: 232px;
+  position: relative;
+}
+
+.calendar__dec-text {
+  letter-spacing: 0.3px;
+}
+
+.calendar__dec-add {
+  position: absolute;
+  right: 4px;
+  bottom: 2px;
+  z-index: 2;
+}
+
+.small-player__video {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  cursor: pointer;
+}
+
+.small-player__play {
+  position: absolute;
+}
+
+.small-player__play {
+  width: 61px;
+  height: 61px;
+  top: 53%;
+  left: 51%;
+}
+
+.date-video {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: right;
+  background-color: #ddb101;
+  text-align: center;
+  padding: 7px 26px;
+}
+
+.date-video__number,.date-video__month{
+  line-height: 1;
+}
+
+
+/*range start*/
+input[type=range] {
+  -webkit-appearance: none;
+  width: 100%;
+  margin: 0;
+  height: 15px;
+  border-radius: 50px;
+  background: rgba(255, 255, 255, 0.24);
+}
+input[type=range]:focus {
+  outline: none;
+  border-radius: 50px;
+  height: 15px;
+  background: rgba(255, 255, 255, 0.24);
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+  width: 20%;
+  height: 100%;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.24);
+  border-radius: 21.2px;
+  border-radius: 50px;
+  height: 15px;
+}
+input[type=range]::-webkit-slider-thumb {
+  height: 15px;
+  width: 197px;
+  border-radius: 21.2px;
+  background-color: #ec9e03;
+  cursor: pointer;
+  -webkit-appearance: none;
+  border-radius: 50px;
+  transition: 0.3s;
+}
+input[type=range]:hover::-webkit-slider-thumb{
+  background-color: #be7e00;
+}
+
+
+input[type=range]:focus::-webkit-slider-runnable-track {
+  background: rgba(255, 255, 255, 0.24);
+  border-radius: 50px;
+  height: 15px;
+}
+
+input[type=range]::-moz-range-track {
+  width: 100%;
+  height: 15px;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.24);
+  border-radius: 25px;
+}
+input[type=range]::-moz-range-thumb {
+  height: 15px;
+  width: 197px;
+  border-radius: 100px;
+  background-color: #ec9e03;
+  cursor: pointer;
+  border-radius: 50px;
+}
+input[type=range]:hover::-moz-range-thumb {
+  background-color: #be7e00;
+}
+input[type=range]::-ms-track {
+  width: 100%;
+  height: 15px;
+  cursor: pointer;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+  border-radius: 50px;
+  background: rgba(255, 255, 255, 0.24);
+}
+input[type=range]::-ms-fill-lower {
+  background: rgba(255, 255, 255, 0.24);
+  border-radius: 50px;
+  height: 15px;
+}
+ input[type=range]::-ms-fill-upper {
+  background: rgba(255, 255, 255, 0.24);
+  border-radius: 50px;
+  height: 15px;
+}
+input[type=range]::-ms-thumb {
+  width: 197px;
+  border-radius: 100px;
+  background-color: #ec9e03;
+  cursor: pointer;
+  height: 15px;
+  border-radius: 50px;
+  transition: 0.3s;
+}  
+input[type=range]:hover::-ms-thumb{
+  background-color: #be7e00;
+}
+
+input[type=range]:focus::-ms-fill-lower {
+  background: rgba(255, 255, 255, 0.24);
+  border-radius: 50px;
+}
+input[type=range]:focus::-ms-fill-upper {
+  background: rgba(255, 255, 255, 0.24);
+  border-radius: 50px;
+}
+.calendar-range{
+  width: 90%;
+  margin: 0 auto;
+  padding-left: 23px;
+}
+
+/*range end*/
+/*calendar-range end*/
