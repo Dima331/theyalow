@@ -699,6 +699,7 @@ button {
 .view-display {
   width: 100%;
   padding-left: 18px;
+  position: relative;
 }
 
 .kind-display__description {
@@ -826,7 +827,9 @@ button {
 .news-list__item {
   display: flex;
 }
+
 /*calendar start*/
+
 .calendar {
   width: 64.2%;
   margin-right: 3.5%;
@@ -885,6 +888,7 @@ button {
   font-family: "SegoeUI";
   text-transform: uppercase;
 }
+
 .date-video {
   display: inline-flex;
   flex-direction: column;
@@ -955,6 +959,7 @@ button {
   background-position-y: 58%;
   position: relative;
 }
+
 .twitter__date {
   color: #ffffff;
   font-size: 25px;
@@ -992,6 +997,7 @@ button {
   top: 53%;
   left: 51%;
 }
+
 /*small-player end*/
 
 /*range start*/
@@ -1120,3 +1126,74 @@ input[type=range]:focus::-ms-fill-upper {
 /*range end*/
 
 /*calendar-range end*/
+
+/*media start*/
+
+@media screen and (max-width: 1090px) {
+  .calendar__date {
+    display: none;
+  }
+  .hero-list__item {
+    flex-direction: column;
+  }
+  .player {
+    width: 100%;
+    justify-content: center;
+  }
+  .player__controls {
+    width: 549px;
+  }
+  .video-text {
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+    padding-right: 0;
+  }
+  .hero {
+    padding: 167px 0 30px 0;
+  }
+  .advantages__item {
+    border-left: 0;
+  }
+  .advantages__item:last-child {
+    border-right: 0;
+  }
+  .container, .header__container {
+    width: 95%;
+  }
+  .header {
+    width: 100%;
+  }
+  .player__controls {
+    transition: 0s;
+  }
+  .kind-display__view {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .news-list__item {
+    flex-direction: column;
+  }
+  .calendar {
+    width: 100%;
+    margin-right: 0;
+  }
+  .calendar_margin {
+    margin-bottom: 10px;
+  }
+  /* .calendar-range{
+  display: none;
+} */
+  .twitter {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 1080px) {
+  .player__controls {
+    transition: 0.3s;
+  }
+}
+
+/*media end*/
