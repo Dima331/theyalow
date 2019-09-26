@@ -85,6 +85,7 @@ body {
 }
 
 body, html {
+  height: 100%;
   font-size: 1rem;
 }
 
@@ -133,6 +134,7 @@ button {
   background: silver;
   display: flex;
   flex-direction: column;
+  min-height: 100%;
 }
 
 .container {
@@ -143,6 +145,7 @@ button {
 
 .main {
   position: relative;
+  flex: 1 0 auto;
 }
 
 /* хедер start*/
@@ -789,6 +792,8 @@ button {
   box-shadow: 0 -2px 15px rgba(0, 0, 0, 0.7);
   background-color: #4c4c4c;
   position: relative;
+  flex: 0 0 auto;
+  overflow: hidden;
 }
 
 .footer__logo .logo__link::before {
@@ -814,104 +819,17 @@ button {
   font-size: 37px;
 }
 
-.calendar__dec-text {
-  font-size: 29px;
-  letter-spacing: 0px;
-  color: #ffffff;
-  font-family: "SegoeWP";
-  font-weight: 300;
+.news-list_margin {
+  margin-bottom: 43px;
 }
-
-.twitter__date {
-  color: #ffffff;
-  font-size: 25px;
-  letter-spacing: 0px;
-  font-family: "SegoeWP";
-  position: absolute;
-  right: 20px;
-  top: 10px;
-}
-
-.date-video__number {
-  font-size: 51px;
-  letter-spacing: 1px;
-  color: #ffffff;
-  font-family: "SegoeUI-Bold";
-  font-weight: bold;
-}
-
-.date-video__month {
-  font-size: 21px;
-  letter-spacing: 0px;
-  color: #b26529;
-  font-family: "SegoeUI";
-  text-transform: uppercase;
-}
-
-.plus {
-  font-size: 22px;
-  font-weight: 500;
-  color: #fff;
-  padding: 0 10px;
-  transition: 0.3s;
-}
-.plus:hover{
-  transform: scale(1.5);
-}
-
-.plus:focus{
-   -webkit-animation: rotate-center 0.6s ease-in-out both;
-	        animation: rotate-center 0.6s ease-in-out both;
-}
-
-@-webkit-keyframes rotate-center {
-  0% {
-    -webkit-transform: rotate(0);
-            transform: rotate(0);
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
-}
-@keyframes rotate-center {
-  0% {
-    -webkit-transform: rotate(0);
-            transform: rotate(0);
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
-}
-
 
 .news-list__item {
   display: flex;
 }
-.news-list{
-  margin-bottom: 43px;
-}
+/*calendar start*/
 .calendar {
   width: 64.2%;
   margin-right: 3.5%;
-}
-
-.twitter {
-  width: 32.3%;
-  height: 232px;
-  background-color: #ec9e03;
-  background-image: url("assets/images/twitter.svg");
-  background-repeat: no-repeat;
-  background-position-x: 49%;
-  background-position-y: 58%;
-  position: relative;
-}
-
-.twitter__plus {
-  position: absolute;
-  right: 1px;
-  bottom: 2px;
 }
 
 .calendar__wrap {
@@ -933,16 +851,129 @@ button {
   position: relative;
 }
 
-.calendar__dec-text {
-  letter-spacing: 0.3px;
-}
-
 .calendar__dec-add {
   position: absolute;
   right: 4px;
   bottom: 2px;
   z-index: 2;
 }
+
+.calendar__dec-text {
+  font-size: 29px;
+  letter-spacing: 0px;
+  color: #ffffff;
+  font-family: "SegoeWP";
+  font-weight: 300;
+}
+
+.calendar__dec-text {
+  letter-spacing: 0.3px;
+}
+
+.date-video__number {
+  font-size: 51px;
+  letter-spacing: 1px;
+  color: #ffffff;
+  font-family: "SegoeUI-Bold";
+  font-weight: bold;
+}
+
+.date-video__month {
+  font-size: 21px;
+  letter-spacing: 0px;
+  color: #b26529;
+  font-family: "SegoeUI";
+  text-transform: uppercase;
+}
+.date-video {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: right;
+  background-color: #ddb101;
+  text-align: center;
+  padding: 7px 26px;
+}
+
+.date-video__number, .date-video__month {
+  line-height: 1;
+}
+
+/*calendar end*/
+
+/*plus start*/
+
+.plus {
+  font-size: 22px;
+  font-weight: 500;
+  color: #fff;
+  padding: 0 10px;
+  transition: 0.3s;
+}
+
+.plus:focus {
+  -webkit-animation: rotate-center 0.6s ease-in-out both;
+  animation: rotate-center 0.6s ease-in-out both;
+}
+
+.plus:hover {
+  transform: scale(1.5);
+}
+
+@-webkit-keyframes rotate-center {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate-center {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+/*plus end*/
+
+/*twitter start*/
+
+.twitter {
+  width: 32.3%;
+  height: 232px;
+  background-color: #ec9e03;
+  background-image: url("assets/images/twitter.svg");
+  background-repeat: no-repeat;
+  background-position-x: 49%;
+  background-position-y: 58%;
+  position: relative;
+}
+.twitter__date {
+  color: #ffffff;
+  font-size: 25px;
+  letter-spacing: 0px;
+  font-family: "SegoeWP";
+  position: absolute;
+  right: 20px;
+  top: 10px;
+}
+
+.twitter__plus {
+  position: absolute;
+  right: 1px;
+  bottom: 2px;
+}
+
+/*twitter start*/
+
+/*small-player start*/
 
 .small-player__video {
   width: 100%;
@@ -961,22 +992,10 @@ button {
   top: 53%;
   left: 51%;
 }
-
-.date-video {
-  display: inline-flex;
-  flex-direction: column;
-  justify-content: right;
-  background-color: #ddb101;
-  text-align: center;
-  padding: 7px 26px;
-}
-
-.date-video__number,.date-video__month{
-  line-height: 1;
-}
-
+/*small-player end*/
 
 /*range start*/
+
 input[type=range] {
   -webkit-appearance: none;
   width: 100%;
@@ -985,6 +1004,7 @@ input[type=range] {
   border-radius: 50px;
   background: rgba(255, 255, 255, 0.24);
 }
+
 input[type=range]:focus {
   outline: none;
   border-radius: 50px;
@@ -1001,6 +1021,7 @@ input[type=range]::-webkit-slider-runnable-track {
   border-radius: 50px;
   height: 15px;
 }
+
 input[type=range]::-webkit-slider-thumb {
   height: 15px;
   width: 197px;
@@ -1011,10 +1032,10 @@ input[type=range]::-webkit-slider-thumb {
   border-radius: 50px;
   transition: 0.3s;
 }
-input[type=range]:hover::-webkit-slider-thumb{
+
+input[type=range]:hover::-webkit-slider-thumb {
   background-color: #be7e00;
 }
-
 
 input[type=range]:focus::-webkit-slider-runnable-track {
   background: rgba(255, 255, 255, 0.24);
@@ -1029,6 +1050,7 @@ input[type=range]::-moz-range-track {
   background: rgba(255, 255, 255, 0.24);
   border-radius: 25px;
 }
+
 input[type=range]::-moz-range-thumb {
   height: 15px;
   width: 197px;
@@ -1037,9 +1059,11 @@ input[type=range]::-moz-range-thumb {
   cursor: pointer;
   border-radius: 50px;
 }
+
 input[type=range]:hover::-moz-range-thumb {
   background-color: #be7e00;
 }
+
 input[type=range]::-ms-track {
   width: 100%;
   height: 15px;
@@ -1050,16 +1074,19 @@ input[type=range]::-ms-track {
   border-radius: 50px;
   background: rgba(255, 255, 255, 0.24);
 }
+
 input[type=range]::-ms-fill-lower {
   background: rgba(255, 255, 255, 0.24);
   border-radius: 50px;
   height: 15px;
 }
- input[type=range]::-ms-fill-upper {
+
+input[type=range]::-ms-fill-upper {
   background: rgba(255, 255, 255, 0.24);
   border-radius: 50px;
   height: 15px;
 }
+
 input[type=range]::-ms-thumb {
   width: 197px;
   border-radius: 100px;
@@ -1068,8 +1095,9 @@ input[type=range]::-ms-thumb {
   height: 15px;
   border-radius: 50px;
   transition: 0.3s;
-}  
-input[type=range]:hover::-ms-thumb{
+}
+
+input[type=range]:hover::-ms-thumb {
   background-color: #be7e00;
 }
 
@@ -1077,15 +1105,18 @@ input[type=range]:focus::-ms-fill-lower {
   background: rgba(255, 255, 255, 0.24);
   border-radius: 50px;
 }
+
 input[type=range]:focus::-ms-fill-upper {
   background: rgba(255, 255, 255, 0.24);
   border-radius: 50px;
 }
-.calendar-range{
+
+.calendar-range {
   width: 90%;
   margin: 0 auto;
   padding-left: 23px;
 }
 
 /*range end*/
+
 /*calendar-range end*/
