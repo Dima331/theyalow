@@ -1125,6 +1125,13 @@ input[type=range]:focus::-ms-fill-upper {
   background-position: 50%;
 }
 
+.small-player__video {
+  background-image: url("assets/images/bg-v2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50%;
+}
+
 /*media start*/
 
 /*twitter-ms start*/
@@ -1550,6 +1557,19 @@ input[type=range]:focus::-ms-fill-upper {
   .calendar__dec {
     margin-right: 9px;
   }
+  .kind-display {
+    background-image: none;
+    background-color: #4b4b4b;
+  }
+  .section-title {
+    letter-spacing: 1.5px;
+    padding-right: 8px;
+    font-size: 37px;
+    font-family: "opensans";
+  }
+  .kind-display__title {
+    margin-bottom: 82px;
+  }
 }
 
 @media screen and (max-width: 630px) {
@@ -1666,13 +1686,18 @@ input[type=range]:focus::-ms-fill-upper {
     width: 100%;
     height: auto;
   }
+  .player-state {
+    padding: 0 10px;
+  }
 }
+
 @media screen and (max-width: 550px) {
-  .twitter{
+  .twitter {
     background-image: none;
     align-items: center;
   }
 }
+
 @media screen and (max-width: 500px) {
   .player-state {
     padding: 0 10px;
