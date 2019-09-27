@@ -1117,13 +1117,129 @@ input[type=range]:focus::-ms-fill-upper {
 /*range end*/
 
 /*calendar-range end*/
-.player__video{
+
+.player__video {
   background-image: url("assets/images/bg-v1.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50%;
 }
+
 /*media start*/
+
+/*twitter-ms start*/
+
+.twitter {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding: 24px 31px 11px 31px;
+}
+
+.twitter__wrap {
+  display: none;
+}
+
+.tweet {
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 5px;
+  font-size: 13px;
+  letter-spacing: 0px;
+  color: #8f8e8e;
+  font-family: "Arial";
+  padding: 7px 39px 5px 19px;
+  position: relative;
+}
+
+.tweet-list__item {
+  margin-bottom: 14px;
+}
+
+.tweet-list__item:last-child {
+  margin-bottom: 0;
+}
+
+.tweet__text, .tweet__author {
+  line-height: 1.2;
+  letter-spacing: 0.1px;
+}
+
+.tweet-list__item::before {
+  content: "";
+  position: absolute;
+  top: 7px;
+  left: -9px;
+  width: 9px;
+  height: 29px;
+  background-image: url("assets/images/tweet.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.tweet-list__item:nth-child(2) {
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+.tweet-list__item:nth-child(2)::before {
+  opacity: 0.7;
+}
+
+.tweet-list__item:nth-child(3) {
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+.tweet-list__item:nth-child(3)::before {
+  opacity: 0.6;
+}
+
+.form-tweet__btn {
+  font-size: 15px;
+  letter-spacing: 0px;
+  color: #ffffff;
+  font-family: "Arial";
+  background-image: linear-gradient(0deg, #cf8e0b 0%, #eaa927 100%);
+}
+
+.form-tweet__btn:hover {
+  background-image: linear-gradient(0deg, #bc7d00 0%, #efc779 100%);
+}
+
+.form-tweet__btn:focus {
+  background-image: linear-gradient(0deg, #f4b432 0%, #ffd171 100%);
+}
+
+.form-tweet_margin {
+  margin-top: 13px;
+}
+
+.form-tweet__input {
+  padding: 4px;
+  border-radius: 10px;
+  border: 1px solid #bc7d00;
+  width: 100%;
+  padding: 5px 80px 6px 15px;
+  box-shadow: inset 4px 5px 20px 0px #c2c2c2;
+  max-width: 272px;
+}
+
+.form-tweet__col {
+  padding-left: 2px;
+  position: relative;
+}
+
+.form-tweet__btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 4px 18px 4px 12px;
+  border-radius: 0 10px 10px 0;
+  border-bottom: 1px solid #bc7d00;
+  border-top: 1px solid #bc7d00;
+  border-right: 1px solid #bc7d00;
+}
+
+/*twitter-ms end*/
 
 @media screen and (max-width: 1090px) {
   .calendar__date {
@@ -1180,9 +1296,21 @@ input[type=range]:focus::-ms-fill-upper {
   }
   .twitter {
     width: 100%;
+    height: 100%;
   }
   .small-player__video {
     object-fit: fill;
+  }
+  .twitter__wrap {
+    display: flex;
+    flex-direction: column;
+  }
+  .twitter__date, .twitter__plus {
+    display: none;
+  }
+  .twitter {
+    background-position-x: 17.5%;
+    background-position-y: 58%;
   }
 }
 
@@ -1205,16 +1333,17 @@ input[type=range]:focus::-ms-fill-upper {
   .calendar__dec {
     margin-right: 9px;
   }
-  .calendar__dec{
-    padding: 14px 20px 18px 26px;
+  .calendar__dec {
+    padding: 14px 20px 14px 25px;
     line-height: 1.18;
   }
-  .calendar__dec-add{
+  .calendar__dec-add {
     right: 0px;
     bottom: 10px;
   }
-  .calendar__wrap{
+  .calendar__wrap {
     height: auto;
+    padding: 11px 8px 9px 9px;
   }
 }
 
@@ -1403,14 +1532,15 @@ input[type=range]:focus::-ms-fill-upper {
   .advantages__item:nth-child(1) .advantage__img {
     transform: translate(-14%, -9%);
   }
-  .twitter, .calendar-range, .news__title {
+  .calendar-range, .news__title {
     display: none;
   }
   .news-list_margin {
     margin-bottom: 0;
   }
   .news {
-    padding: 11px 8px 9px 9px;
+    /* padding: 11px 8px 9px 9px; */
+    padding: 0;
     background-color: #fff;
     background-image: none;
   }
@@ -1522,21 +1652,27 @@ input[type=range]:focus::-ms-fill-upper {
   .advantages__item:nth-child(3) .advantage__img {
     height: 40px;
   }
-  .calendar__wrap{
+  .calendar__wrap {
     flex-direction: column;
+    padding: 11px 8px 9px 9px;
   }
-  .calendar__dec{
+  .calendar__dec {
     margin: 0;
     width: 100%;
     order: 2;
   }
-  .calendar__video{
+  .calendar__video {
     margin-bottom: 10px;
     width: 100%;
     height: auto;
   }
 }
-
+@media screen and (max-width: 550px) {
+  .twitter{
+    background-image: none;
+    align-items: center;
+  }
+}
 @media screen and (max-width: 500px) {
   .player-state {
     padding: 0 10px;
