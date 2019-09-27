@@ -343,6 +343,7 @@ button {
   width: 549px;
   height: 328px;
   object-fit: cover;
+  object-position: center;
 }
 
 .player__controls {
@@ -1116,7 +1117,12 @@ input[type=range]:focus::-ms-fill-upper {
 /*range end*/
 
 /*calendar-range end*/
-
+.player__video{
+  background-image: url("assets/images/bg-v1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50%;
+}
 /*media start*/
 
 @media screen and (max-width: 1090px) {
@@ -1175,6 +1181,9 @@ input[type=range]:focus::-ms-fill-upper {
   .twitter {
     width: 100%;
   }
+  .small-player__video {
+    object-fit: fill;
+  }
 }
 
 @media screen and (max-width: 1080px) {
@@ -1183,7 +1192,29 @@ input[type=range]:focus::-ms-fill-upper {
   }
   .excellence {
     box-shadow: 0px -4px 0px 0px rgba(255, 255, 255, 0.67), 0px -9px 0px 0px rgba(255, 255, 255, 0.27), inset 0 -5px 1px 0px rgba(255, 255, 255, 0.27);
-    border:0;
+    border: 0;
+    background-size: 8%;
+    z-index: 10;
+  }
+  .calendar__dec {
+    width: 48%;
+  }
+  .calendar__video {
+    width: 51%;
+  }
+  .calendar__dec {
+    margin-right: 9px;
+  }
+  .calendar__dec{
+    padding: 14px 20px 18px 26px;
+    line-height: 1.18;
+  }
+  .calendar__dec-add{
+    right: 0px;
+    bottom: 10px;
+  }
+  .calendar__wrap{
+    height: auto;
   }
 }
 
@@ -1213,7 +1244,6 @@ input[type=range]:focus::-ms-fill-upper {
   .player__video {
     width: 100%;
     height: 327px;
-    object-fit: unset;
   }
   .player__play {
     left: 51.5%;
@@ -1329,49 +1359,66 @@ input[type=range]:focus::-ms-fill-upper {
     width: 31px;
     height: 31px;
   }
-  .advantage__title{
+  .advantage__title {
     font-size: 23px;
   }
-  .advantages__item:nth-child(1) .advantage__img{
+  .advantages__item:nth-child(1) .advantage__img {
     height: 61px;
   }
-  .advantages__item:nth-child(2) .advantage__img{
+  .advantages__item:nth-child(2) .advantage__img {
     height: 69px;
   }
-  .advantages__item:nth-child(3) .advantage__img{
+  .advantages__item:nth-child(3) .advantage__img {
     height: 69px;
   }
-  .advantage{
+  .advantage {
     padding: 25px 0 28px;
   }
-  .advantages__item:nth-child(3) .advantage__wrap{
+  .advantages__item:nth-child(3) .advantage__wrap {
     margin: 0;
   }
-  .advantages__item:nth-child(2) .advantage__wrap{
+  .advantages__item:nth-child(2) .advantage__wrap {
     margin: 0;
   }
-  .advantages__item:nth-child(1) .advantage__wrap{
+  .advantages__item:nth-child(1) .advantage__wrap {
     margin: 0;
   }
-  .advantages__item:nth-child(2) .advantage__img{
+  .advantages__item:nth-child(2) .advantage__img {
     margin-bottom: 2px;
-    transform: translate(6%,-14%);
+    transform: translate(6%, -14%);
   }
-  .advantages__item:nth-child(3) .advantage__img{
+  .advantages__item:nth-child(3) .advantage__img {
     margin-bottom: 16px;
   }
-  .advantages__item:nth-child(3) .advantage__title{
+  .advantages__item:nth-child(3) .advantage__title {
     padding-left: 12px;
   }
-  .advantages__item:nth-child(2) .advantage__title{
+  .advantages__item:nth-child(2) .advantage__title {
     padding-left: 13px;
   }
-  .advantages__item:nth-child(1) .advantage__title{
-       padding-left: 0; 
-       transform: translate(-12%,0%);
+  .advantages__item:nth-child(1) .advantage__title {
+    padding-left: 0;
+    transform: translate(-12%, 0%);
   }
-  .advantages__item:nth-child(1) .advantage__img{
-    transform: translate(-14%,-9%);
+  .advantages__item:nth-child(1) .advantage__img {
+    transform: translate(-14%, -9%);
+  }
+  .twitter, .calendar-range, .news__title {
+    display: none;
+  }
+  .news-list_margin {
+    margin-bottom: 0;
+  }
+  .news {
+    padding: 11px 8px 9px 9px;
+    background-color: #fff;
+    background-image: none;
+  }
+  .calendar_margin {
+    margin-bottom: 0;
+  }
+  .calendar__dec {
+    margin-right: 9px;
   }
 }
 
@@ -1425,56 +1472,68 @@ input[type=range]:focus::-ms-fill-upper {
   .sale__text {
     font-size: 15px;
   }
-  .advantages__item:nth-child(3) .advantage__wrap{
+  .advantages__item:nth-child(3) .advantage__wrap {
     margin: 0;
   }
-  .advantages__item:nth-child(2) .advantage__wrap{
+  .advantages__item:nth-child(2) .advantage__wrap {
     margin: 0;
   }
-  .advantages__item:nth-child(1) .advantage__wrap{
+  .advantages__item:nth-child(1) .advantage__wrap {
     margin: 0;
   }
-  .advantages__item:nth-child(2) .advantage__img{
+  .advantages__item:nth-child(2) .advantage__img {
     margin-bottom: 10px;
     transform: translate(0);
   }
-  .advantages__item:nth-child(3) .advantage__img{
+  .advantages__item:nth-child(3) .advantage__img {
     margin-bottom: 10px;
   }
-  .advantages__item:nth-child(3) .advantage__title{
+  .advantages__item:nth-child(3) .advantage__title {
     padding-left: 0;
   }
-  .advantages__item:nth-child(2) .advantage__title{
+  .advantages__item:nth-child(2) .advantage__title {
     padding-left: 0;
   }
-  .advantages__item:nth-child(1) .advantage__title{
-    padding-left: 0; 
+  .advantages__item:nth-child(1) .advantage__title {
+    padding-left: 0;
     transform: translate(0);
   }
-  .advantages__item:nth-child(1) .advantage__img{
+  .advantages__item:nth-child(1) .advantage__img {
     transform: translate(0);
   }
-  .advantages__item:nth-child(2) .advantage__wrap{
+  .advantages__item:nth-child(2) .advantage__wrap {
     transform: translateY(0);
   }
-  .advantages__item:nth-child(1) .advantage__wrap{
+  .advantages__item:nth-child(1) .advantage__wrap {
     transform: translateY(0);
   }
-  .advantage{
+  .advantage {
     justify-content: space-around;
-    
   }
-  .advantage__title{
+  .advantage__title {
     font-size: 14px;
   }
-  .advantages__item:nth-child(1) .advantage__img{
+  .advantages__item:nth-child(1) .advantage__img {
     height: 40px;
   }
-  .advantages__item:nth-child(2) .advantage__img{
+  .advantages__item:nth-child(2) .advantage__img {
     height: 40px;
   }
-  .advantages__item:nth-child(3) .advantage__img{
+  .advantages__item:nth-child(3) .advantage__img {
     height: 40px;
+  }
+  .calendar__wrap{
+    flex-direction: column;
+  }
+  .calendar__dec{
+    margin: 0;
+    width: 100%;
+    order: 2;
+  }
+  .calendar__video{
+    margin-bottom: 10px;
+    width: 100%;
+    height: auto;
   }
 }
 
